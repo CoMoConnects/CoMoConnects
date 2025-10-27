@@ -82,18 +82,29 @@
             font-size: 1.1em;
         }
 
+        <section id="postcard">
+            <a href="images/postcard-fullsize.png" target="_blank">
+                <div class="postcard-placeholder">
+                    [Postcard Graphic Placeholder — Click to view full size 6.5"x12"]
+                </div>
+            </a>
+        </section>
+
         /* Placeholder for postcard graphic */
         .postcard-placeholder {
-            width: 650px; /* 6.5" at 100px per inch scale */
-            height: 120px; /* 12" scaled down for web */
-            background-color: #ddd;
-            border: 2px dashed #aaa;
+            width: 50%;
+            max-width: 600px;
+            aspect-ratio: 12 / 6.5;
+            height: auto;
+            background: #e0e0e0;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             color: #555;
             font-size: 1em;
-            margin-bottom: 2em;
+            margin: 30px auto;
+            border: 2px dashed #aaa;
+            cursor: pointer;
         }
 
         /* --- Financial Advantage Section --- */
@@ -167,9 +178,11 @@
     </section>
 
     <!-- Footer -->
+    <!-- Extra Comment-->
+    <p>Contact us today to get started!</p>
     <footer>
-        <p>Email: info@couplemooreconnections.com</p>
-        <p>Phone: (555) 123-4567</p>
+        <p>Email: comoprollc@gmail.com</p>
+        <p>Phone: (720) 576-2231</p>
         <p>Affordable, local, hassle-free EDDM advertising.</p>
     </footer>
 
