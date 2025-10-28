@@ -1,190 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoupleMoore Connections</title>
-    <style>
-        /* --- Reset & base styles --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CoupleMoore Connects</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            scroll-behavior: smooth; /* Smooth scrolling */
-        }
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Parkinsans&display=swap" rel="stylesheet">
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+<style>
+  body {
+    font-family: 'Parkinsans', sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+    color: #333;
+  }
 
-        /* --- Hero Section --- */
-        header {
-            height: 100vh;
-            background: linear-gradient(to right, #4facfe, #00f2fe);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 0 20px;
-            color: white;
-        }
+  header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #ffa500, #ffff66); /* temporary orange-yellow gradient */
+    color: white;
+  }
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
-        }
+  header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: inherit; /* placeholder, you can replace with logo font later */
+  }
 
-        header p {
-            font-size: 1.3em;
-            max-width: 700px;
-            margin-bottom: 1.5em;
-        }
+  header p {
+    font-size: 1.5em;
+    margin-top: 0;
+  }
 
-        header .cta-button {
-            background-color: #ff6a00;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background 0.3s;
-        }
+  section {
+    padding: 50px 20px;
+    max-width: 900px;
+    margin: auto;
+  }
 
-        header .cta-button:hover {
-            background-color: #e55d00;
-        }
+  /* Postcard placeholder */
+  .postcard-placeholder {
+    width: 50%;           
+    max-width: 6in;     
+    aspect-ratio: 12 / 6.5;
+    height: auto;         
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 1em;
+    margin: 30px auto;    
+    border: 2px dashed #aaa;
+    cursor: pointer;      
+  }
 
-        /* --- Intro / Postcard Section --- */
-        section#intro {
-            padding: 80px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: #f7f7f7;
-            text-align: center;
-        }
+  /* CTA Buttons */
+  .cta {
+    display: inline-block;
+    margin: 15px 10px;
+    padding: 15px 25px;
+    background: #0a9396;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
 
-        section#intro h2 {
-            font-size: 2em;
-            margin-bottom: 1em;
-        }
+  .cta:hover {
+    background: #007f85;
+  }
 
-        section#intro p {
-            max-width: 700px;
-            margin-bottom: 2em;
-            font-size: 1.1em;
-        }
+  h2 {
+    color: #005f73;
+  }
 
-        <section id="postcard">
-            <a href="images/postcard-fullsize.png" target="_blank">
-                <div class="postcard-placeholder">
-                    [Postcard Graphic Placeholder — Click to view full size 6.5"x12"]
-                </div>
-            </a>
-        </section>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+  }
 
-        /* Placeholder for postcard graphic */
-        .postcard-placeholder {
-            width: 50%;
-            max-width: 600px;
-            aspect-ratio: 12 / 6.5;
-            height: auto;
-            background: #e0e0e0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #555;
-            font-size: 1em;
-            margin: 30px auto;
-            border: 2px dashed #aaa;
-            cursor: pointer;
-        }
+  table, th, td {
+    border: 1px solid #ccc;
+  }
 
-        /* --- Financial Advantage Section --- */
-        section#advantage {
-            padding: 80px 20px;
-            text-align: center;
-        }
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
 
-        section#advantage h2 {
-            font-size: 2em;
-            margin-bottom: 1em;
-        }
+  th {
+    background-color: #0a9396;
+    color: white;
+  }
 
-        section#advantage p {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #ff6a00;
-        }
+  .refund {
+    background-color: #e9d8a6;
+    padding: 15px;
+    margin: 20px 0;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+  }
 
-        /* --- Footer --- */
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        footer p {
-            margin-bottom: 0.5em;
-        }
-
-        /* --- Responsive --- */
-        @media (max-width: 700px) {
-            header h1 {
-                font-size: 2.2em;
-            }
-            header p {
-                font-size: 1.1em;
-            }
-            .postcard-placeholder {
-                width: 90%;
-                height: 80px;
-            }
-        }
-    </style>
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #f1f1f1;
+    font-size: 0.9em;
+    color: #555;
+  }
+</style>
 </head>
 <body>
 
-    <!-- Hero / Splash -->
-    <header>
-        <h1>CoupleMoore Connections</h1>
-        <p>Your local businesses, delivered to every doorstep.</p>
-        <a href="#intro" class="cta-button">See Our Postcard Options</a>
-    </header>
+<header>
+  <h1>CoupleMoore Connects</h1>
+  <p>Your brand delivered<br>to every local doorstep.</p>
+</header>
 
-    <!-- Intro / Postcard Placeholder -->
-    <section id="intro">
-        <h2>Affordable EDDM Advertising Made Easy</h2>
-        <p>CoupleMoore Connections handles printing, layout, and delivery — connecting your business to thousands of local homes without the hassle or high cost of doing it yourself.</p>
-        <div class="postcard-placeholder">
-            Postcard Graphic Placeholder (6.5" x 12")
-        </div>
-    </section>
+<section id="postcard">
+  <a href="images/postcard-fullsize.png" target="_blank">
+    <div class="postcard-placeholder">
+      [Postcard Graphic Placeholder — Click to view full size 6.5"x12"]
+    </div>
+  </a>
+</section>
 
-    <!-- Financial Advantage -->
-    <section id="advantage">
-        <h2>Save Time & Money</h2>
-        <p>Advertise with us and reach 2,500 homes for a fraction of the cost and effort it would take to do it yourself.</p>
-    </section>
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    CoupleMoore Connects helps local businesses reach nearby households with professionally designed and mailed postcards.
+    You choose your ad space, and we handle the printing, layout, and Every Door Direct Mail delivery. 
+    <strong>Satisfaction Guarantee:</strong> If your mailing does not occur, you will be fully refunded within 21 days of your order.
+  </p>
+</section>
 
-    <!-- Footer -->
-    <!-- Extra Comment-->
-    <p>Contact us today to get started!</p>
-    <footer>
-        <p>Email: comoprollc@gmail.com</p>
-        <p>Phone: (720) 576-2231</p>
-        <p>Affordable, local, hassle-free EDDM advertising.</p>
-    </footer>
+<section id="order-links">
+  <a class="cta" href="#order">Choose your desired ad space</a>
+  <a class="cta" href="#order">Place Your Order</a>
+  <a class="cta" href="#order">Order Now</a>
+  <br>
+  <a class="cta" href="#payment">Already placed your order? Go here ---></a>
+  <a class="cta" href="#order">Need to place your order? Go here ---></a>
+</section>
+
+<section id="pricing">
+  <h2>Ad Options & Pricing</h2>
+  <table>
+    <tr>
+      <th>Ad Option</th>
+      <th>Ad Size</th>
+      <th>Rate</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>Single Ad Space</td>
+      <td>2.75" × 2.25"</td>
+      <td>$200</td>
+      <td>Standard placement — reach all 2,500 homes.</td>
+    </tr>
+    <tr>
+      <td>3-Block Ad</td>
+      <td>3 connected spaces</td>
+      <td>$500</td>
+      <td>Larger impact — horizontal or vertical layout.</td>
+    </tr>
+    <tr>
+      <td>Half-Side Ad</td>
+      <td>4 connected spaces</td>
+      <td>$625</td>
+      <td>Prominent placement — half of one side.</td>
+    </tr>
+    <tr>
+      <td>Full-Side Takeover</td>
+      <td>8 connected spaces (one full side)</td>
+      <td>$1,400</td>
+      <td>Your business only on one side — we handle layout, printing, and mailing for less than it would cost you to do it yourself.</td>
+    </tr>
+  </table>
+  <p>One 2"×1" area is reserved for postal indicia on one side; ad sizes adjust slightly as needed.</p>
+  <p>
+    💡 Doing your own Every Door Direct Mail (EDDM) campaign to 2,500 homes typically costs about the same — around $1,400 — not counting the time and design effort. 
+    With <strong>CoupleMoore Connects</strong>, you get professional layout, printing, and delivery included, and none of the hassle.
+  </p>
+</section>
+
+<footer>
+  Powered by CoMoPro LLC
+</footer>
 
 </body>
 </html>
