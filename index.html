@@ -20,14 +20,14 @@
   header {
     text-align: center;
     padding: 80px 20px;
-    background: linear-gradient(to right, #D96126, #E6B422); /* left-to-right autumn orange → gold */
+    background: linear-gradient(to right, #E36A20, #FFBB1B); /* left-to-right autumn orange → gold */
     color: white;
   }
 
   header h1 {
     font-size: 3em;
     margin-bottom: 10px;
-    font-family: inherit; /* placeholder for custom logo font */
+    font-family: inherit; /* placeholder for logo font */
   }
 
   header p {
@@ -108,20 +108,20 @@
 
   /* About Us formatting */
   #about p {
-    text-indent: 5ch; /* approximate five spaces */
+    white-space: pre-line; /* preserves manual line breaks and indentation */
     margin: 0 0 1em 0;
+    font-size: 1em;
   }
 
   .about-centered {
     text-align: center;
-    font-size: 1.2em; /* 2-3 points larger than Hero section */
+    font-size: 1.2em; /* slightly larger than Hero paragraph */
     margin: 20px 0;
-    white-space: pre-line; /* respects line breaks */
+    white-space: pre-line;
   }
 
   .about-small {
-    font-size: 0.7em; 
-    text-indent: 5ch; 
+    font-size: 0.7em;
     margin: 0;
   }
 
@@ -132,6 +132,32 @@
     font-size: 0.9em;
     color: #555;
   }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    #about p {
+      font-size: 0.95em;
+      margin: 0 20px 1em 20px;
+    }
+
+    .about-centered {
+      font-size: 1.1em;
+      margin: 15px 15px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #about p {
+      font-size: 0.9em;
+      margin: 0 10px 1em 10px;
+    }
+
+    .about-centered {
+      font-size: 1.05em;
+      margin: 10px 10px;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -152,18 +178,17 @@
 <section id="about">
   <h2>About Us</h2>
   <p>
-     CoupleMoore Connects helps your brand reach nearby households and other
-     businesses with professionally designed and mailed postcards. We can also
-     help if your business operates strictly online by publishing your QR code or URL.
-     CoupleMooreConnects puts your brand in the hands of those who may not find
-     it otherwise!
+     CoupleMoore Connects helps your brand reach nearby households and other<br>
+     businesses with professionally designed and mailed postcards. We can also<br>
+     help if your business operates strictly online by publishing your QR code or URL.<br>
+     CoupleMooreConnects puts your brand in the hands of those who may not find it otherwise!
   </p>
   <p class="about-centered">
-_*You simply choose your ad space, and we handle
+_*You simply choose your ad space, and we handle<br>
 the printing, layout, and delivery to 2,500 addresses.*_
   </p>
   <p>
-     *Delivery Guarantee:* If your mailing does not occur, you will be fully refunded
+     *Delivery Guarantee:* If your mailing does not occur, you will be fully refunded<br>
      within 15 business days* of your order.
   </p>
   <p class="about-small">
@@ -216,10 +241,10 @@ the printing, layout, and delivery to 2,500 addresses.*_
   </table>
 
   <p class="highlighted-paragraph">
-✨ CoupleMoore Connects will take care of ✨
-✨ the professional design layout, high-quality printing, ✨
-✨ and delivery to 2,500 local doors. ✨
-✨ We save you the hassle and expense of ✨
+✨ CoupleMoore Connects will take care of ✨<br>
+✨ the professional design layout, high-quality printing, ✨<br>
+✨ and delivery to 2,500 local doors. ✨<br>
+✨ We save you the hassle and expense of ✨<br>
 ✨ trying to reach those future customers on your own. ✨
   </p>
 </section>
