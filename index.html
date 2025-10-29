@@ -99,20 +99,30 @@
     color: white;
   }
 
-  .refund {
-    background-color: #e9d8a6;
-    padding: 15px;
-    margin: 20px 0;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 5px;
-  }
-
   .highlighted-paragraph {
     text-align: center;
     margin: 30px 0;
     font-weight: bold;
     white-space: pre-line; /* respects line breaks */
+  }
+
+  /* About Us formatting */
+  #about p {
+    text-indent: 5ch; /* approximate five spaces */
+    margin: 0 0 1em 0;
+  }
+
+  .about-centered {
+    text-align: center;
+    font-size: 1.2em; /* 2-3 points larger than Hero section */
+    margin: 20px 0;
+    white-space: pre-line; /* respects line breaks */
+  }
+
+  .about-small {
+    font-size: 0.7em; 
+    text-indent: 5ch; 
+    margin: 0;
   }
 
   footer {
@@ -141,16 +151,23 @@
 
 <section id="about">
   <h2>About Us</h2>
-  <p style="text-indent: 2em;">
-    CoupleMoore Connects helps your brand reach nearby households and other businesses with professionally designed and mailed postcards. 
-    We can also help if your business operates strictly online by publishing your QR code or URL, and putting it in the hands of those who may not find it otherwise!
+  <p>
+     CoupleMoore Connects helps your brand reach nearby households and other
+     businesses with professionally designed and mailed postcards. We can also
+     help if your business operates strictly online by publishing your QR code or URL.
+     CoupleMooreConnects puts your brand in the hands of those who may not find
+     it otherwise!
   </p>
-  <p style="text-indent: 2em;">
-    You choose your ad space, and we handle the printing, layout, and delivery. 
-    <strong>Delivery Guarantee:</strong> If your mailing does not occur, you will be fully refunded within 21 days* of your order.
+  <p class="about-centered">
+_*You simply choose your ad space, and we handle
+the printing, layout, and delivery to 2,500 addresses.*_
   </p>
-  <p style="font-size: 0.7em; text-indent: 2em;">
-    *This window will shrink to 12 days in the near future!
+  <p>
+     *Delivery Guarantee:* If your mailing does not occur, you will be fully refunded
+     within 15 business days* of your order.
+  </p>
+  <p class="about-small">
+     _*This window will shrink to 10 days in the near future._
   </p>
 </section>
 
