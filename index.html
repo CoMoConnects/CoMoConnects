@@ -69,25 +69,31 @@ body {
     margin-top: -0.3rem; /* adjust spacing between lines */
 }
 
-/* Hero tagline styling */
+/* Hero tagline styling — Euphoria Script with glow and responsive scaling */
 .hero-tagline {
     font-family: 'Euphoria Script', cursive;
-    font-size: 2.5rem; /* adjust to match width of CoupleMoore graphic */
-    color: #FFC300;
+    font-size: 3rem; /* base size for desktop */
+    color: #FFFD76;
     text-align: center;
+    display: inline-block;
+    padding: 0.5rem 1rem;
     text-shadow:
         0 0 4px #4D2D00,
         0 0 8px #4D2D00,
-        0 0 12px #4D2D00;
-    line-height: 1.2;
-    white-space: nowrap; /* keeps it on one line */
-    margin-top: 1rem;
+        0 0 12px #4D2D00; /* uniform glow effect */
+    white-space: nowrap;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for tablets and phones */
 @media (max-width: 768px) {
     .hero-tagline {
-        font-size: 2.5rem;
+        font-size: 2.2rem; /* scales down for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-tagline {
+        font-size: 2rem; /* scales down for smaller phones */
     }
 }
 
@@ -326,5 +332,6 @@ in the hands of those who may not find it otherwise.
 
 </body>
 </html>
+
 
 
