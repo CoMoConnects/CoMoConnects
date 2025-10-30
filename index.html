@@ -33,6 +33,7 @@ body {
     text-align: center;
     background: linear-gradient(to right, #E36A20, #FFBB1B);
     padding: 2rem 1rem;
+    position: relative;
 }
 
 /* Hero heading: CoupleMoore and CONNECTS */
@@ -44,6 +45,7 @@ body {
     font-weight: normal;
     line-height: 1.2;
     margin-bottom: 1rem;
+    text-shadow: 0 0 10px #4D2D00; /* blurred brown outline/shadow for both lines */
 }
 
 /* CoupleMoore line */
@@ -52,21 +54,19 @@ body {
     font-size: 4rem;
     letter-spacing: normal;
     display: inline-block;
+    width: max-content;
+    white-space: nowrap;
 }
 
 /* CONNECTS line */
 .hero-heading .connects {
     font-family: 'Protest Guerrilla', cursive;
-    font-size: 4rem;
+    font-size: 4.7rem; /* increased size to visually match width of CoupleMoore */
     letter-spacing: normal;
     display: inline-block;
-}
-
-/* Adjust widths to match visually */
-.hero-heading .couplemoore,
-.hero-heading .connects {
     width: max-content;
     white-space: nowrap;
+    margin-top: -0.3rem; /* adjust spacing between lines */
 }
 
 /* Hero tagline */
@@ -74,33 +74,33 @@ body {
     font-family: 'Cherry Cream Soda', cursive;
     font-size: 1.5rem;
     margin-top: 1rem;
+    color: #FFC300;
+    text-shadow: 0 0 2px #4D2D00; /* 2-point outline effect */
 }
 
-/* CTA Buttons */
+/* CTA Buttons under gradient background moved to white space */
 .cta-container {
     margin-top: 1.5rem;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 
+/* Generic CTA button frame styling */
 .cta-button {
-    background-color: #4D2D00;
-    color: #FFFD76;
+    background-color: transparent;
+    color: #4D2D00;
     padding: 0.8rem 1.5rem;
-    border: none;
+    border: 3px solid #F4A300;
     border-radius: 8px;
     text-decoration: none;
     font-family: 'Cherry Cream Soda', cursive;
     font-size: 1.1rem;
     cursor: pointer;
     transition: 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #F4A300;
-    color: #4D2D00;
+    box-shadow: 0 0 10px rgba(77, 45, 0, 0.25);
 }
 
 /* Postcard Placeholder */
@@ -129,22 +129,18 @@ body {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-align: center; /* centered as per 5 of 8 */
 }
 
-/* Indented paragraph text with responsive wrapping */
+/* Centered lines of paragraph text with preserved line breaks */
 .about-us p {
-    text-indent: 0; /* remove default first line indent */
+    text-align: center;
     margin-bottom: 1rem;
-    white-space: pre-line; /* preserves line breaks in text */
+    line-height: 1.4;
+    white-space: pre-line;
 }
 
-/* Each line starts with 5-space indent */
-.about-us .indented {
-    padding-left: 5ch;
-    font-size: 1rem;
-}
-
-/* Centered larger line with highlighted frame */
+/* Centered highlight frame for CTA */
 .about-us .centered-highlight {
     font-family: 'Parkinsans', sans-serif;
     font-weight: bold;
@@ -161,6 +157,7 @@ body {
 .about-us .delivery {
     font-size: 1rem;
     margin-bottom: 0.25rem;
+    text-align: left;
 }
 
 .about-us .delivery b {
@@ -171,7 +168,7 @@ body {
     font-style: italic;
 }
 
-/* Tiny note */
+/* Tiny note under delivery guarantee */
 .about-us .tiny-note {
     font-size: 0.65rem;
     margin-left: 5ch;
@@ -206,8 +203,7 @@ body {
         font-size: 1.2rem;
     }
 
-    .about-us .indented {
-        padding-left: 2ch;
+    .about-us p {
         font-size: 0.95rem;
     }
 
@@ -231,8 +227,7 @@ body {
         font-size: 1rem;
     }
 
-    .about-us .indented {
-        padding-left: 1ch;
+    .about-us p {
         font-size: 0.9rem;
     }
 
@@ -263,26 +258,33 @@ body {
     <div class="hero-tagline">
         Your brand delivered<br>to every local doorstep.
     </div>
-    <div class="cta-container">
-        <a href="#order" class="cta-button">Choose your desired ad space</a>
-        <a href="#pay" class="cta-button">Already placed your order? Go here ---&gt;</a>
-        <a href="#order" class="cta-button">Need to place your order? Go here ---&gt;</a>
-    </div>
-    <div class="postcard-placeholder">
-        <a href="sample-postcard.jpg" target="_blank">
-            <img src="sample-postcard-thumb.jpg" alt="Sample Postcard">
-        </a>
-    </div>
 </section>
+
+<!-- CTA Buttons under white space -->
+<div class="cta-container">
+    <a href="#order" class="cta-button">Choose your desired ad space</a>
+    <a href="#pay" class="cta-button">Already placed your order? Go here ---&gt;</a>
+    <a href="#order" class="cta-button">Need to place your order? Go here ---&gt;</a>
+</div>
+
+<!-- Postcard Placeholder -->
+<div class="postcard-placeholder">
+    <a href="sample-postcard.jpg" target="_blank">
+        <img src="sample-postcard-thumb.jpg" alt="Sample Postcard">
+    </a>
+</div>
 
 <!-- About Us Section -->
 <section class="about-us">
-    <h2>✨ About Us ✨</h2>
-    <p class="indented">     CoupleMoore Connects helps your brand reach nearby households and[br]
-     other businesses with professionally designed and mailed postcards.[br]
-     We can also help if your business operates strictly online by publishing[br]
-     your QR code or URL. CoupleMooreConnects puts your brand in the[br]
-     hands of those who may not find it otherwise!</p>
+    <h2>✨ What We Do ✨</h2>
+    <p>
+CoupleMoore Connects helps your brand reach nearby households
+and other businesses with professionally designed postcards.
+We can even help if your business operates strictly online
+by publishing your QR code or web address.
+CoupleMooreConnects puts your brand
+in the hands of those who may not find it otherwise.
+    </p>
 
     <div class="centered-highlight">
         You simply choose your ad space, and we handle<br>
@@ -290,7 +292,7 @@ body {
     </div>
 
     <p class="delivery"><b>Delivery Guarantee:</b> <i>If your mailing does not occur, you will be fully refunded within 15 business days* of your order.</i></p>
-    <p class="tiny-note">_*This window will shrink to 10 business days in the near future._</p>
+    <p class="tiny-note">*This window will shrink to 10 business days in the near future.</p>
 </section>
 
 <!-- Footer Note -->
