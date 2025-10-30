@@ -103,30 +103,57 @@ body {
     }
 }
 
-/* CTA Buttons under gradient background moved to white space */
-.cta-container {
-    margin-top: 1.5rem;
+/* CTA Buttons Section */
+.cta-buttons {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 2rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
 }
 
-/* Generic CTA button frame styling */
+/* Each row for positioning */
+.cta-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Button base style */
 .cta-button {
-    background-color: transparent;
-    color: #4D2D00;
-    padding: 0.8rem 1.5rem;
     border: 3px solid #F4A300;
     border-radius: 8px;
-    text-decoration: none;
+    color: #4D2D00;
+    background-color: transparent;
+    box-shadow: 4px 4px 0 rgba(77, 45, 0, 0.25);
     font-family: 'Cherry Cream Soda', cursive;
     font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0 0 10px rgba(77, 45, 0, 0.25);
+    text-align: center;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    display: inline-block;
+    width: 240px; /* All equal width */
+    transition: transform 0.2s ease;
 }
+
+.cta-button:hover {
+    transform: scale(1.05);
+}
+
+/* Stair-step positioning */
+.cta-row.left {
+    justify-content: flex-start;
+}
+
+.cta-row.center {
+    justify-content: center;
+}
+
+.cta-row.right {
+    justify-content: flex-end;
+}
+
 
 /* Postcard Placeholder */
 .postcard-placeholder {
@@ -332,6 +359,7 @@ in the hands of those who may not find it otherwise.
 
 </body>
 </html>
+
 
 
 
