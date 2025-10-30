@@ -69,13 +69,32 @@ body {
     margin-top: -0.3rem; /* adjust spacing between lines */
 }
 
-/* Hero tagline */
+/* Hero tagline styling */
 .hero-tagline {
-    font-family: 'Cherry Cream Soda', cursive;
-    font-size: 1.5rem;
-    margin-top: 1rem;
+    font-family: 'Euphoria Script', cursive;
+    font-size: 4rem; /* adjust to match width of CoupleMoore graphic */
     color: #FFC300;
-    text-shadow: 0 0 2px #4D2D00; /* 2-point outline effect */
+    text-align: center;
+    text-shadow:
+        0 0 4px #4D2D00,
+        0 0 8px #4D2D00,
+        0 0 12px #4D2D00;
+    line-height: 1.2;
+    white-space: nowrap; /* keeps it on one line */
+    margin-top: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-tagline {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-tagline {
+        font-size: 2rem;
+    }
 }
 
 /* CTA Buttons under gradient background moved to white space */
@@ -255,8 +274,8 @@ body {
         <span class="couplemoore">CoupleMoore</span>
         <span class="connects">CONNECTS</span>
     </div>
-    <div class="hero-tagline">
-        Your brand delivered<br>to every local doorstep.
+    <div class="hero-tagline new-tagline">
+    your company’s direct connection to every door
     </div>
 </section>
 
@@ -307,3 +326,4 @@ in the hands of those who may not find it otherwise.
 
 </body>
 </html>
+
