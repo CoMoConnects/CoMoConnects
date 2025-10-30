@@ -292,30 +292,18 @@ body {
         font-size: 0.8rem;
     }
 
-/* CTA Buttons under gradient background */
-.cta-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: nowrap;
-    margin: 2rem auto;
-    max-width: 800px;
-}
+<div class="cta-container">
+    <div class="cta-row left">
+        <a href="#order" class="cta-button">Choose your desired ad space</a>
+    </div>
+    <div class="cta-row center">
+        <a href="#pay" class="cta-button">Already placed your order? Go here ---&gt;</a>
+    </div>
+    <div class="cta-row right">
+        <a href="#order" class="cta-button">Need to place your order? Go here ---&gt;</a>
+    </div>
+</div>
 
-/* Ensure all buttons are the same width — based on the widest one */
-.cta-container .cta-button {
-    flex: 1 1 0;
-    text-align: center;
-    white-space: nowrap;
-}
-
-/* Optional: adds line break space after buttons */
-.cta-container::after {
-    content: "";
-    display: block;
-    height: 1rem;
-}
 </style>
 </head>
 <body>
@@ -373,13 +361,8 @@ in the hands of those who may not find it otherwise.
     <p class="bold">high-quality printing, and delivery to 2,500 local doors.</p>
     <p>We save you the hassle and expense of trying to</p>
     <p>reach those future customers on your own.</p>
-    <p style="font-size:0.8rem;">Powered by CoMoPro LLC</p>
+    <p style="font-size:0.8rem; margin-top:2rem;">Powered by CoMoPro LLC</p>
 </section>
 
 </body>
 </html>
-
-
-
-
-
