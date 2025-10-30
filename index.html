@@ -69,13 +69,39 @@ body {
     margin-top: -0.3rem; /* adjust spacing between lines */
 }
 
-/* Hero tagline */
+/* Hero tagline with Euphoria Script, glow, scalable width */
 .hero-tagline {
-    font-family: 'Cherry Cream Soda', cursive;
-    font-size: 1.5rem;
-    margin-top: 1rem;
-    color: #FFC300;
-    text-shadow: 0 0 2px #4D2D00; /* 2-point outline effect */
+    font-family: 'Euphoria Script', cursive;
+    font-size: 3rem; /* base size, will scale with responsive */
+    color: #FFC300; /* same hex as before */
+    text-align: center;
+    line-height: 1.2;
+    display: inline-block;
+    width: max-content;
+    white-space: nowrap;
+}
+
+/* Uniform glow/halo effect */
+.glow-text {
+    text-shadow:
+        0 0 5px #4D2D00,
+        0 0 10px #4D2D00,
+        0 0 15px #4D2D00,
+        0 0 20px #4D2D00;
+    display: inline-block;
+}
+
+/* Make tagline scale on smaller devices */
+@media (max-width: 768px) {
+    .hero-tagline {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-tagline {
+        font-size: 1.5rem;
+    }
 }
 
 /* CTA Buttons under gradient background moved to white space */
@@ -307,6 +333,7 @@ in the hands of those who may not find it otherwise.
 
 </body>
 </html>
+
 
 
 
