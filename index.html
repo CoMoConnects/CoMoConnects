@@ -292,10 +292,29 @@ body {
         font-size: 0.8rem;
     }
 
-    .cta-container {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
+/* CTA Buttons under gradient background */
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+/* Ensure all buttons are the same width — based on the widest one */
+.cta-container .cta-button {
+    flex: 1 1 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Optional: adds line break space after buttons */
+.cta-container::after {
+    content: "";
+    display: block;
+    height: 1rem;
 }
 </style>
 </head>
@@ -359,6 +378,7 @@ in the hands of those who may not find it otherwise.
 
 </body>
 </html>
+
 
 
 
